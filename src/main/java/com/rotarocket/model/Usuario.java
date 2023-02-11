@@ -21,4 +21,8 @@ public class Usuario {
     private String nome;
     private String login;
     private String senha;
+
+    public static Usuario criar(String nome, String login, String senha) {
+        return new Usuario(null, nome, login, senha );
+    }
 }

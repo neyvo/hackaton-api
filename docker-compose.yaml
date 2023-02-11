@@ -1,10 +1,7 @@
-version: '3.8'
+version: '2'
 
 services:
-  app:
-    build: .
-    ports:
-      - 8080:8080
+
   db:
     container_name: pg_rocket
     image: postgres:14
@@ -15,4 +12,15 @@ services:
     environment:
       POSTGRES_DB: mydb
       POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypasswd
+      POSTGRES_PASSWORD: mypass
+
+  app:
+    build: .
+    ports:
+      - 8080:8080
+    depends_on:
+      - "db"
+networks:
+  test:
+    external:
+      name: nat
