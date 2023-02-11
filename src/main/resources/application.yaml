@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: rota-rocket
+  main:
+    banner-mode: "off"
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/mydb}
+    username: ${DB_USERNAME:myuser}
+    password: ${DB_PASSWORD:mypassword}
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+
+  mvc:
+    throwExceptionIfNoHandlerFound: true
+
+springdoc:
+  swagger-ui:
+    disable-swagger-default-url: true
