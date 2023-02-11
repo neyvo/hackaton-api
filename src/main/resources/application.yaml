@@ -4,7 +4,7 @@ spring:
   main:
     banner-mode: "off"
   datasource:
-    url: jdbc:postgresql://db/mydb
+    url: jdbc:postgresql://localhost:5432/mydb
     username: myuser
     password: mypass
     database-platform: org.hibernate.dialect.PostgreSQL9Dialect
