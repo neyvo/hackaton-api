@@ -14,5 +14,5 @@ $ docker-compose up -d
 http://localhost:8080/swagger-ui/index.html
 
 # Usuario e senha para ser usado na aplicação
-usuario: instivo
-senha: instivo
+usuario: teste
+senha: teste
